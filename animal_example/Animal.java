@@ -70,6 +70,6 @@
         if (getHungerLevel() >= HUNGER_LEVEL_DECREMENT) {
             decrementHungerLevel();
         }
-        System.out.println( "Eating" + food );
+        System.out.println( "Eating: " + food );
     }
  }
