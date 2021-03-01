@@ -1,5 +1,5 @@
 /**
- * Garment
+ * A Garment of clothing
  * @author Conor Fox (ID 119322236)
  */
 
@@ -7,8 +7,9 @@ public class Garment {
     private final String name;
     private final String purpose;
 
-    public Garment( final String name ) {
+    public Garment( final String name, final String purpose ) {
         this.name = name;
+        this.purpose = purpose;
     }
 
     /**
@@ -22,5 +23,9 @@ public class Garment {
 
     public void printPurpose() {
         System.out.println( name + " " + purpose);
+    }
+
+    public void printItemisedBill() {
+        System.out.println( "Itemised bill for " + name );
     }
 }
