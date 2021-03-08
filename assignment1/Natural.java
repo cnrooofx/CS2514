@@ -1,8 +1,10 @@
 public abstract class Natural extends Fabric {
     private final String source;
 
-    public Natural( final double costPerUnit, final String source ) {
-        super(costPerUnit);
+    public Natural( final String name,
+                    final double costPerUnit,
+                    final String source ) {
+        super( name, costPerUnit );
         this.source = source;
     }
 
