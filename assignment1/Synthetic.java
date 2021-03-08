@@ -1,5 +1,7 @@
 /**
  * A type of Fabric made of synthetic materials.
+ * 
+ * @author Conor Fox (ID 119322236)
  */
 
 public abstract class Synthetic extends Fabric {

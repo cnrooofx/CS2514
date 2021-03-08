@@ -1,5 +1,7 @@
 /**
  * A type of fabric that is made from Cotton.
+ * 
+ * @author Conor Fox (ID 119322236)
  */
 
 public class Cotton extends Natural {

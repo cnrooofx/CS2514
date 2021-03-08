@@ -1,5 +1,7 @@
 /**
  * A type of fabric that is made from Polyester.
+ * 
+ * @author Conor Fox (ID 119322236)
  */
 
 public class Polyester extends Synthetic {

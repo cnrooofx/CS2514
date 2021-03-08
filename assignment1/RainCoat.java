@@ -1,5 +1,7 @@
 /**
  * A coat to wear when it is raining.
+ * 
+ * @author Conor Fox (ID 119322236)
  */
 
 public final class RainCoat extends Coat {

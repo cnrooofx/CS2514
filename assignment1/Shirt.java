@@ -1,5 +1,7 @@
 /**
  * A garment of clothing that is a Shirt.
+ * 
+ * @author Conor Fox (ID 119322236)
  */
 
 public abstract class Shirt extends Garment {

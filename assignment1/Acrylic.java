@@ -1,5 +1,7 @@
 /**
  * A type of fabric that is made from Acrylic.
+ * 
+ * @author Conor Fox (ID 119322236)
  */
 
 public class Acrylic extends Synthetic {

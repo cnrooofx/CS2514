@@ -1,5 +1,7 @@
 /**
  * A piece of Fabric to make clothes from.
+ * 
+ * @author Conor Fox (ID 119322236)
  */
 
 public abstract class Fabric {

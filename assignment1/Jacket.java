@@ -1,5 +1,7 @@
 /**
  * A garment of clothing that is a Jacket.
+ * 
+ * @author Conor Fox (ID 119322236)
  */
 
 public final class Jacket extends Coat {

@@ -1,5 +1,7 @@
 /**
- * A garment of clothing that is a T-Shirt. 
+ * A garment of clothing that is a T-Shirt.
+ * 
+ * @author Conor Fox (ID 119322236)
  */
 
 public final class TShirt extends Shirt {

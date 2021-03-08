@@ -1,5 +1,7 @@
 /**
  * A pair of Jeans.
+ * 
+ * @author Conor Fox (ID 119322236)
  */
 
 public final class Jeans extends Trousers {
