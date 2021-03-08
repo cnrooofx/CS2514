@@ -11,7 +11,7 @@ public abstract class Garment {
     private final double numUnits;
 
     /**
-     * 
+     * Construct a new Garment instance.
      * 
      * @param name The name of the Garment
      * @param purpose The purpose of the Garment
