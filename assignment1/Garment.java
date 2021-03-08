@@ -1,5 +1,5 @@
 /**
- * A Garment that represents a piece of clothing
+ * A Garment that represents an item of clothing.
  * 
  * @author Conor Fox (ID 119322236)
  */
@@ -8,21 +8,30 @@ public abstract class Garment {
     private final String name;
     private final String purpose;
     private final Fabric madeFrom;
-    private final double numOfUnits;
+    private final double numUnits;
 
+    /**
+     * 
+     * 
+     * @param name The name of the Garment
+     * @param purpose The purpose of the Garment
+     * @param madeFrom The Fabric that the Garment is made of
+     * @param numUnits The number of Fabric units to make the Garment
+     */
     public Garment( final String name,
                     final String purpose,
                     final Fabric madeFrom,
-                    final double numOfUnits ) {
+                    final double numUnits ) {
         this.name = name;
         this.purpose = purpose;
         this.madeFrom = madeFrom;
-        this.numOfUnits = numOfUnits;
+        this.numUnits = numUnits;
     }
 
     /**
-     * Get the name of this Garment instance.
-     * @return The name of this Garment instance.
+     * Get the name of this Garment piece.
+     * 
+     * @return The name of this Garment instance
      */
     public String getName() {
         return name;
@@ -42,10 +51,9 @@ public abstract class Garment {
         System.out.println("Itemised bill for " + name);
 
         Double environmentTax;
-        String unitString = Double.toString(numOfUnits);
         String fabricName = madeFrom.getName();
-        String summary = "Made of " + unitString
-                            + " units of " + fabricName;
+        String summary = "Made of " + numUnits
+                             + " units of " + fabricName;
 
         if (madeFrom instanceof Natural) {
             final Natural madeFromNatural = (Natural)this.madeFrom;
@@ -59,25 +67,31 @@ public abstract class Garment {
         }
         System.out.println(summary);
 
-        double totalTax = environmentTax * numOfUnits;
-        String totalTaxString = Double.toString(totalTax);
-        String environmentTaxString = Double.toString(environmentTax);
-        System.out.println(" environment tax: " + environmentTaxString
-                           + " * " + unitString + " = " + totalTaxString);
+        // Environment Tax
+        double totalTax = environmentTax * numUnits;
+        System.out.println(" environment tax: " + environmentTax
+                           + " * " + numUnits + " = " + totalTax);
 
+        // Base Price
         double unitCost = madeFrom.getUnitCost();
-        double basePrice = unitCost * numOfUnits;
-        String unitCostString = Double.toString(unitCost);
-        String basePriceString = Double.toString(basePrice);
-        System.out.println("      base price: " + unitCostString + " * "
-                            + unitString + " = " + basePriceString);
+        double basePrice = unitCost * numUnits;
+        System.out.println("      base price: " + unitCost + " * "
+                              + numUnits + " = " + basePrice);
         
+        // Grand Total
         double totalPrice = environmentTax + unitCost;
-        double grandTotal = totalPrice * numOfUnits;
-        String totalPriceString = Double.toString(totalPrice);
-        String grandTotalString = Double.toString(grandTotal);
-        System.out.println("     grand total: " + totalPriceString + " * "
-                           + unitString + " = " + grandTotalString);
-        
+        double grandTotal = totalPrice * numUnits;
+        System.out.println("     grand total: " + totalPrice + " * "
+                           + numUnits + " = " + grandTotal);
+    }
+
+    /**
+     * Returns a description of the Garment.
+     * 
+     * @return A string describing the Garment
+     */
+    @Override
+    public String toString() {
+        return "Garment: " + name;
     }
 }
