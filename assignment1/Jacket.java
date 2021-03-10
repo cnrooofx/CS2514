@@ -12,7 +12,7 @@ public final class Jacket extends Coat {
     /**
      * Construct a new Jacket instance.
      */
-    public Jacket() {
+    public Jacket( ) {
         super( JACKET_NAME, JACKET_FABRIC, JACKET_UNITS );
     }
 }

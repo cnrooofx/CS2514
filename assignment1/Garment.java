@@ -15,7 +15,7 @@ public abstract class Garment {
      * 
      * @param name The name of the Garment
      * @param purpose The purpose of the Garment
-     * @param madeFrom The Fabric that the Garment is made of
+     * @param madeFrom The Fabric that the Garment is made from
      * @param numUnits The number of Fabric units to make the Garment
      */
     public Garment( final String name,
@@ -33,65 +33,64 @@ public abstract class Garment {
      * 
      * @return The name of this Garment instance
      */
-    public String getName() {
+    public String getName( ) {
         return name;
     }
 
     /**
      * Print a description of this Garment piece.
      */
-    public void printPurpose() {
-        System.out.println( name + " " + purpose);
+    public void printPurpose( ) {
+        System.out.println( name + " " + purpose );
     }
 
     /**
      * Print a bill summing up the total cost of this Garment.
      */
-    public void printItemisedBill() {
-        System.out.println("Itemised bill for " + name);
+    public void printItemisedBill( ) {
+        System.out.println( "Itemised bill for " + name );
 
+        final String fabricName = madeFrom.getName( );
+        String summary = "Made of " + numUnits + " units of " + fabricName;
         Double environmentTax;
-        String fabricName = madeFrom.getName();
-        String summary = "Made of " + numUnits
-                             + " units of " + fabricName;
 
-        if (madeFrom instanceof Natural) {
-            final Natural madeFromNatural = (Natural)this.madeFrom;
-            String source = madeFromNatural.getSource();
-            summary += " made from " + source;
+        if ( madeFrom instanceof Natural ) {
+            final Natural madeFromNatural = (Natural)madeFrom;
+            final String source = madeFromNatural.getSource( );
+            summary += " made of " + source;
 
             environmentTax = 0.0;
         } else {
-            final Synthetic madeFromSynthetic = (Synthetic)this.madeFrom;
-            environmentTax = madeFromSynthetic.getEnvironmentTax();
+            final Synthetic madeFromSynthetic = (Synthetic)madeFrom;
+            environmentTax = madeFromSynthetic.getEnvironmentTax( );
         }
-        System.out.println(summary);
+        System.out.println( summary );
 
         // Environment Tax
-        double totalTax = environmentTax * numUnits;
-        System.out.println(" environment tax: " + environmentTax
-                           + " * " + numUnits + " = " + totalTax);
+        final double totalTax = environmentTax * numUnits;
+        System.out.println( " environment tax: " + numUnits + " * "
+                              + environmentTax + " = " + totalTax );
 
         // Base Price
-        double unitCost = madeFrom.getUnitCost();
-        double basePrice = unitCost * numUnits;
-        System.out.println("      base price: " + unitCost + " * "
-                              + numUnits + " = " + basePrice);
-        
+        final double unitCost = madeFrom.getUnitCost( );
+        final double basePrice = unitCost * numUnits;
+        System.out.println( "      base price: " + numUnits + " * "
+                              + unitCost + " = " + basePrice );
+
         // Grand Total
-        double totalPrice = environmentTax + unitCost;
-        double grandTotal = totalPrice * numUnits;
-        System.out.println("     grand total: " + totalPrice + " * "
-                           + numUnits + " = " + grandTotal);
+        final double totalPrice = environmentTax + unitCost;
+        final double grandTotal = totalPrice * numUnits;
+        System.out.println( "     grand total: " + numUnits + " * "
+                              + totalPrice + " = " + grandTotal );
     }
 
     /**
-     * Returns a description of the Garment.
+     * Returns a description of this Garment.
      * 
      * @return A string describing the Garment
      */
     @Override
-    public String toString() {
+    public String toString( ) {
         return "Garment: " + name;
     }
 }

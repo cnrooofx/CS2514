@@ -12,7 +12,7 @@ public final class WinterCoat extends Coat {
     /**
      * Construct a new WinterCoat instance.
      */
-    public WinterCoat() {
+    public WinterCoat( ) {
         super( WINTERCOAT_NAME, WINTERCOAT_FABRIC, WINTERCOAT_UNITS );
     }
 }

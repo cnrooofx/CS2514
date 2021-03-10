@@ -23,7 +23,7 @@ public abstract class Synthetic extends Fabric {
      * 
      * @return The Environment Tax value
      */
-    public double getEnvironmentTax() {
+    public double getEnvironmentTax( ) {
         return ENVIRONMENT_TAX;
     }
 }

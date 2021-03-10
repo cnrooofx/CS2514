@@ -26,7 +26,7 @@ public abstract class Natural extends Fabric {
      * 
      * @return The source of the Fabric
      */
-    public String getSource() {
-        return this.source;
+    public String getSource( ) {
+        return source;
     }
 }

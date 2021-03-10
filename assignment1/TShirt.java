@@ -12,7 +12,7 @@ public final class TShirt extends Shirt {
     /**
      * Construct a new TShirt instance.
      */
-    public TShirt() {
+    public TShirt( ) {
         super( TSHIRT_NAME, TSHIRT_FABRIC, TSHIRT_UNITS );
     }
 }

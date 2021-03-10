@@ -12,7 +12,7 @@ public final class RainCoat extends Coat {
     /**
      * Construct a new RainCoat instance.
      */
-    public RainCoat() {
+    public RainCoat( ) {
         super( RAINCOAT_NAME, RAINCOAT_FABRIC, RAINCOAT_UNITS );
     }
 }

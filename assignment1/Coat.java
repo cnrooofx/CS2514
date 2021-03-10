@@ -18,7 +18,7 @@ public abstract class Coat extends Garment {
      */
     public Coat( final String name,
                  final Fabric madeFrom,
-                 final double numUnits) {
-        super(name, COAT_PURPOSE, madeFrom, numUnits);
+                 final double numUnits ) {
+        super( name, COAT_PURPOSE, madeFrom, numUnits );
     }
 }

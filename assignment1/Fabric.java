@@ -24,8 +24,8 @@ public abstract class Fabric {
      * 
      * @return The name of the Fabric
      */
-    public String getName() {
-        return this.name;
+    public String getName( ) {
+        return name;
     }
 
     /**
@@ -33,17 +33,17 @@ public abstract class Fabric {
      * 
      * @return Cost per unit of the Fabric
      */
-    public double getUnitCost() {
-        return this.costPerUnit;
+    public double getUnitCost( ) {
+        return costPerUnit;
     }
 
     /**
-     * Returns a description of the Garment.
+     * Returns a description of the Fabric.
      * 
-     * @return A string describing the Garment
+     * @return A string describing the Fabric
      */
     @Override
-    public String toString() {
+    public String toString( ) {
         return "Fabric: " + name;
     }
 }
