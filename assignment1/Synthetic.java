@@ -5,8 +5,7 @@
  */
 
 public abstract class Synthetic extends Fabric {
-    /** The amount of environment tax on synthetic fabric. */
-    public static final double ENVIRONMENT_TAX = 2.0;
+    private static final double ENVIRONMENT_TAX = 2.0;
     
     /**
      * Construct a new Synthetic fabric instance.

@@ -5,8 +5,7 @@
  */
 
 public abstract class Coat extends Garment {
-    /** The purpose of a coat. */
-    public static final String COAT_PURPOSE
+    private static final String COAT_PURPOSE
                     = "provides extra protection against the elements";
 
     /**

@@ -5,7 +5,6 @@
  */
 
 public abstract class Trousers extends Garment {
-    /** The purpose of trousers. */
     private static final String TROUSERS_PURPOSE = "covers the legs";
 
     /**
