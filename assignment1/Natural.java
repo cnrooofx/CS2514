@@ -1,5 +1,5 @@
 /**
- * A type of Fabric made of natural materials.
+ * A type of fabric made of natural materials.
  * 
  * @author Conor Fox (ID 119322236)
  */

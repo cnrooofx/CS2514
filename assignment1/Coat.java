@@ -1,5 +1,5 @@
 /**
- * A garment of clothing that is a Coat.
+ * An outer garment of clothing to be worn when outside.
  * 
  * @author Conor Fox (ID 119322236)
  */

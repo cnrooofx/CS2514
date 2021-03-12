@@ -1,5 +1,5 @@
 /**
- * A garment of clothing that is a Jacket.
+ * A light coat worn to stay warm.
  * 
  * @author Conor Fox (ID 119322236)
  */

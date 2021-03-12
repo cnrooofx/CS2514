@@ -1,5 +1,5 @@
 /**
- * A Coat to be worn during the winter.
+ * A coat to be worn during the winter.
  * 
  * @author Conor Fox (ID 119322236)
  */

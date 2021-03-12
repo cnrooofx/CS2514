@@ -1,10 +1,10 @@
 /**
- * A type of fabric that is made from Acrylic.
+ * A type of fabric that is made from acrylic.
  * 
  * @author Conor Fox (ID 119322236)
  */
 
-public class Acrylic extends Synthetic {
+public final class Acrylic extends Synthetic {
     private static final String ACRYLIC_NAME = "acrylic";
     private static final double ACRYLIC_COST = 6.0;
 

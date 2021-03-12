@@ -1,5 +1,5 @@
 /**
- * A pair of Jeans.
+ * A pair of jeans.
  * 
  * @author Conor Fox (ID 119322236)
  */

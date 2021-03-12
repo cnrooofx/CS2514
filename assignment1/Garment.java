@@ -1,5 +1,5 @@
 /**
- * A Garment that represents an item of clothing.
+ * An item of clothing to be worn.
  * 
  * @author Conor Fox (ID 119322236)
  */

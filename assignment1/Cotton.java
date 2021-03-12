@@ -1,10 +1,10 @@
 /**
- * A type of fabric that is made from Cotton.
+ * A type of fabric that is made from cotton.
  * 
  * @author Conor Fox (ID 119322236)
  */
 
-public class Cotton extends Natural {
+public final class Cotton extends Natural {
     private static final String COTTON_NAME = "cotton";
     private static final double COTTON_COST = 2.0;
     private static final String COTTON_SOURCE = "Gossypium";

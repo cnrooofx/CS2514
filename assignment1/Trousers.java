@@ -1,5 +1,5 @@
 /**
- * A garment of clothing that is Trousers.
+ * A garment of clothing to be worn on the legs.
  * 
  * @author Conor Fox (ID 119322236)
  */

@@ -1,5 +1,5 @@
 /**
- * A piece of Fabric to make clothes from.
+ * A piece of material to make clothes from.
  * 
  * @author Conor Fox (ID 119322236)
  */

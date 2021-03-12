@@ -1,5 +1,5 @@
 /**
- * A garment of clothing that is a T-Shirt.
+ * A lightweight shirt.
  * 
  * @author Conor Fox (ID 119322236)
  */

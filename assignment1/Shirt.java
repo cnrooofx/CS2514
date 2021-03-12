@@ -1,5 +1,5 @@
 /**
- * A garment of clothing that is a Shirt.
+ * A garment of clothing to be worn on the upper body.
  * 
  * @author Conor Fox (ID 119322236)
  */
