@@ -52,7 +52,7 @@ public abstract class Garment {
 
         final String fabricName = madeFrom.getName( );
         String summary = "Made of " + numUnits + " units of " + fabricName;
-        final Double environmentTax;
+        final double environmentTax;
 
         if ( madeFrom instanceof Natural ) {
             final Natural madeFromNatural = (Natural)madeFrom;
