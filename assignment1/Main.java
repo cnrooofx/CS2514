@@ -1,3 +1,9 @@
+/**
+ * Test for all the methods for the classes.
+ * 
+ * @author Conor Fox (ID 119322236)
+ */
+
 import java.util.List;
 import java.util.ArrayList;
 
