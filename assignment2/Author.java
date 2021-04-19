@@ -1,75 +1,60 @@
 import java.util.List;
 import java.util.ArrayList;
 
-public enum Author implements Person {
+public enum Author implements Writer {
     JJR_Tolkien("JJR Tolkien"),
     JD_Sallinger("JD Sallinger");
 
-    private final String name;
+    final Person person;
     private final List<Book> publishedBooks = new ArrayList<Book>();
-    private final List<Book> ownedBooks = new ArrayList<Book>();
-    private double earnings = 0.0;
 
     private Author(final String name) {
-        this.name = name;
+        this.person = ConcretePerson.create(name);
     }
 
     @Override
     public void receive(final double x) {
-        this.earnings += x;
+        person.receive(x);
     }
 
     @Override
     public void charge(final double x) {
-        this.earnings -= x;
+        person.charge(x);
     }
 
     @Override
-    public void buy(final Book b) {
-        final double price = b.getPrice();
-        if (this.earnings >= price) {
-            this.charge(price);
-            this.ownedBooks.add(b);
-            final Author author = b.getAuthor();
-            author.receive(price * 0.10);
-        } else {
-            System.out.println("You don't have enough money to buy");
-            System.out.println("    " + b);
-        }
-    }
-
-    public void publishBook(Book book) {
-        this.publishedBooks.add(book);
+    public void buy(Book b) {
+        person.buy(b);
     }
 
     @Override
     public void printBooksOwned() {
-        if (ownedBooks.isEmpty()) {
-            System.out.println(this + " doesn't own any books");
-        } else {
-            System.out.println(this + " owns:");
-            for (Book book : this.ownedBooks) {
-                System.out.println("    " + book);
-            }
-        }
+        person.printBooksOwned();
     }
 
+    @Override
+    public double getEarnings() {
+        return person.getEarnings();
+    }
+
+    @Override
+    public String toString() {
+        return person.toString();
+    }
+
+    @Override
+    public void publishBook(final Book b) {
+        this.publishedBooks.add(b);
+    }
+
+    @Override
     public void printBooksPublished() {
-        if (publishedBooks.isEmpty()) {
+        if (this.publishedBooks.isEmpty()) {
             System.out.println(this + " hasn't published any books");
         } else {
             for (Book book : this.publishedBooks) {
                 System.out.println("    " + book);
             }
         }
-    }
-
-    public double getEarnings() {
-        return this.earnings;
-    }
-
-    @Override
-    public String toString() {
-        return this.name;
     }
 }
