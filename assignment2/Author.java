@@ -15,13 +15,13 @@ public enum Author implements Person {
     }
 
     @Override
-    public void charge(final double x) {
-        this.earnings -= x;
+    public void receive(final double x) {
+        this.earnings += x;
     }
 
     @Override
-    public void receive(final double x) {
-        this.earnings += x;
+    public void charge(final double x) {
+        this.earnings -= x;
     }
 
     @Override
@@ -38,24 +38,38 @@ public enum Author implements Person {
         }
     }
 
-    public void publish(Book book) {
+    public void publishBook(Book book) {
         this.publishedBooks.add(book);
     }
 
     @Override
     public void printBooksOwned() {
-        for (Book book : this.ownedBooks) {
-            System.out.println(book);
+        if (ownedBooks.isEmpty()) {
+            System.out.println(this + " doesn't own any books");
+        } else {
+            System.out.println(this + " owns:");
+            for (Book book : this.ownedBooks) {
+                System.out.println("    " + book);
+            }
         }
     }
 
     public void printBooksPublished() {
-        for (Book book : this.ownedBooks) {
-            System.out.println(book);
+        if (publishedBooks.isEmpty()) {
+            System.out.println(this + " hasn't published any books");
+        } else {
+            for (Book book : this.publishedBooks) {
+                System.out.println("    " + book);
+            }
         }
     }
 
     public double getEarnings() {
         return this.earnings;
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
     }
 }
