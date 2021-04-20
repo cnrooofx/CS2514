@@ -12,7 +12,8 @@ public class Title {
         this.subtitle = null;
     }
 
-    public String getTitle() {
+    @Override
+    public String toString() {
         String titleString = this.title;
         if (this.subtitle != null) {
             titleString += " / " + this.subtitle;
