@@ -1,15 +1,22 @@
+/**
+ * Authors who can write books.
+ * 
+ * @author Conor Fox (ID 119322236)
+ */
+
 import java.util.List;
 import java.util.ArrayList;
 
 public enum Author implements Writer {
     JJR_Tolkien("JJR Tolkien"),
-    JD_Sallinger("JD Sallinger");
+    JD_Sallinger("JD Sallinger"),
+    George_Orwell("George Orwell");
 
     final Person person;
     private final List<Book> publishedBooks = new ArrayList<Book>();
 
     private Author(final String name) {
-        this.person = ConcretePerson.create(name);
+        this.person = new ConcretePerson(name);
     }
 
     @Override
@@ -23,7 +30,7 @@ public enum Author implements Writer {
     }
 
     @Override
-    public void buy(Book b) {
+    public void buy(final Book b) {
         person.buy(b);
     }
 
@@ -49,12 +56,13 @@ public enum Author implements Writer {
 
     @Override
     public void printBooksPublished() {
-        if (this.publishedBooks.isEmpty()) {
-            System.out.println(this + " hasn't published any books");
-        } else {
+        if (! this.publishedBooks.isEmpty()) {
+            System.out.println(this + " published:");
             for (Book book : this.publishedBooks) {
-                System.out.println("    " + book);
+                System.out.println("   " + book.getTitle());
             }
+        } else {
+            System.out.println(this + " hasn't published any books");
         }
     }
 }

@@ -1,3 +1,9 @@
+/**
+ * Concrete implementation of the Person interface.
+ * 
+ * @author Conor Fox (ID 119322236)
+ */
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -6,12 +12,8 @@ public final class ConcretePerson implements Person {
     private double earnings = 0.0;
     private final List<Book> booksOwned = new ArrayList<Book>();
 
-    private ConcretePerson(final String name) {
+    public ConcretePerson(final String name) {
         this.name = name;
-    }
-
-    public static Person create(final String name) {
-        return new ConcretePerson(name);
     }
 
     @Override
@@ -34,7 +36,7 @@ public final class ConcretePerson implements Person {
             author.receive(price * 0.10);
         } else {
             System.out.println("You don't have enough money to buy");
-            System.out.println("    " + b);
+            System.out.println("   " + b);
         }
     }
 
@@ -43,7 +45,7 @@ public final class ConcretePerson implements Person {
         if (! booksOwned.isEmpty()) {
             System.out.println(this + " owns:");
             for (Book book : this.booksOwned) {
-                System.out.println("    " + book);
+                System.out.println("   " + book.getTitle());
             }
         } else {
             System.out.println(this + " doesn't own any books");
