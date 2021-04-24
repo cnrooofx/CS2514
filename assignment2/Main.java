@@ -44,7 +44,7 @@ public class Main {
         r2.receive(20);
         r2.buy(b3);
         r2.buy(b1);
-        System.out.println(a1 + " owns " + a3.getEarnings() + " Euro");
+        System.out.println(a3 + " owns " + a3.getEarnings() + " Euro");
         r2.printBooksOwned();
 
     }
