@@ -1,3 +1,8 @@
+/**
+ * A printed book with a durable cover.
+ * 
+ * @author Conor Fox (ID 119322236)
+ */
 public class Hardback implements PrintedBook {
     private static final double HARDBACK_COST = 12.0;
     private final PrintedBook book;

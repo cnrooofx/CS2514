@@ -1,12 +1,11 @@
+import java.util.List;
+import java.util.ArrayList;
+
 /**
  * Concrete implementation of the Person interface.
  * 
  * @author Conor Fox (ID 119322236)
  */
-
-import java.util.List;
-import java.util.ArrayList;
-
 public final class ConcretePerson implements Person {
     private final String name;
     private double earnings = 0.0;

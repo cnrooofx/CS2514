@@ -1,3 +1,8 @@
+/**
+ * A standard paper covered book.
+ * 
+ * @author Conor Fox (ID 119322236)
+ */
 public class Paperback implements PrintedBook {
     private static final double PAPERBACK_COST = 10.0;
     private final PrintedBook book;

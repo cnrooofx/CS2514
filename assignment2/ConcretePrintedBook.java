@@ -1,3 +1,8 @@
+/**
+ * Concrete implementation of the PrintedBook interface.
+ * 
+ * @author Conor Fox (ID 119322236)
+ */
 public final class ConcretePrintedBook implements PrintedBook {
     private final Book book;
     private final int pageCount;

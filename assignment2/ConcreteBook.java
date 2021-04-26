@@ -1,7 +1,7 @@
 /**
  * Concrete implementation of the Book interface.
  * 
- * @author Conor Fox (ID 119322236x)
+ * @author Conor Fox (ID 119322236)
  */
 public final class ConcreteBook implements Book {
     private final Author author;

@@ -1,3 +1,8 @@
+/**
+ * A recording of a book to be listened to.
+ * 
+ * @author Conor Fox (ID 119322236)
+ */
 public class AudioBook implements Book {
     private static final double AUDIOBOOK_COST = 15.0;
     private final Book book;

@@ -1,12 +1,11 @@
+import java.util.List;
+import java.util.ArrayList;
+
 /**
  * Authors who can write books.
  * 
  * @author Conor Fox (ID 119322236)
  */
-
-import java.util.List;
-import java.util.ArrayList;
-
 public enum Author implements Writer {
     JJR_Tolkien("JJR Tolkien"),
     JD_Sallinger("JD Sallinger"),
